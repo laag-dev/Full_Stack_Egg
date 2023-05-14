@@ -1,4 +1,4 @@
-package poo;
+package javaPoo;
 
 import java.time.LocalDate;
 import java.time.temporal.ChronoUnit;
