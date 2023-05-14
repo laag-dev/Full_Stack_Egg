@@ -1,7 +1,3 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package Entidad;
 
 import java.util.Scanner;
@@ -13,7 +9,7 @@ public class Libro {
     private String titulo;
     private String autor;
     private int numeroPagina;
-    
+
     //Constructores
     public Libro() {
     }
@@ -38,14 +34,13 @@ public class Libro {
         System.out.println("Ingrese el numero de pagina del libro: ");
         numeroPagina = consola.nextInt();
     }
-    
- 
-    public void mostrarInfo(){
-     
-        System.out.println("Titulo: " +this.titulo);
-        System.out.println("Autor: " +this.autor);
-        System.out.println("ISBN: " +this.isbn);
-        System.out.println("Numero de pagina: " +this.numeroPagina);
+
+    public void mostrarInfo() {
+
+        System.out.println("Titulo: " + this.titulo);
+        System.out.println("Autor: " + this.autor);
+        System.out.println("ISBN: " + this.isbn);
+        System.out.println("Numero de pagina: " + this.numeroPagina);
     }
-    
+
 }

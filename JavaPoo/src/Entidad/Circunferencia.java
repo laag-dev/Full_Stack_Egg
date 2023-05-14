@@ -8,12 +8,10 @@ public class Circunferencia {
 
     public Circunferencia() {
     }
-   
 
     public Circunferencia(double radio) {
         this.radio = radio;
     }
-
 
     public double getRadio() {
         return radio;
@@ -27,9 +25,7 @@ public class Circunferencia {
     public void crearCircunferencia() {
         Scanner consola = new Scanner(System.in);
         System.out.println("Ingrese el radio de la circunferencia: ");
-        double radio = consola.nextDouble();
-        this.radio = radio;
-
+        radio = consola.nextDouble();
     }
 
     public double area() {

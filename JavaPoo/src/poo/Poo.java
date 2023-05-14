@@ -1,41 +1,31 @@
 // <editor-fold defaultstate="collapsed" desc=" Ejercicio 14">
 // </editor-fold>
 package poo;
-//import Entidad.Libro;
-//import Entidad.Circunferencia;
-//import Entidad.Operacion3;
-//import Entidad.Cuenta;
-//import Entidad.Curso;
-//import Entidad.Movil;
-//import Entidad.PersonaImc;
-//import java.time.LocalDate;
-//import java.time.temporal.ChronoUnit;
+import Entidad.Libro;
+import Entidad.Circunferencia;
+import Entidad.Curso;
+import Entidad.Movil;
+import Entidad.PersonaImc;
+import java.time.LocalDate;
+import java.time.temporal.ChronoUnit;
 import java.util.Arrays;
 import Entidad.Ahorcado;
 import java.util.Scanner;
-//import Entidad.Cafetera;
-//import Service.NifService;
+import Entidad.Cafetera;
+import Entidad.Operacion;
+import Entidad.Persona;
+import Entidad.Rectangulo;
+import Service.NifService;
 
 public class Poo {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
 
         Scanner consola = new Scanner(System.in);
-// <editor-fold defaultstate="collapsed" desc=" Ejercicio 1">
-Libro1 libro = new Libro1();
-libro.cargaLibro();
-libro.mostrarInfo();
-// </editor-fold>
-// <editor-fold defaultstate="collapsed" desc=" Ejercicio 2">
-        Circunferencia2 circunferencia = new Circunferencia2();
-        circunferencia.crearCircunferencia();
-        circunferencia.area();
-        circunferencia.perimetro();
-        System.out.println("El area es: " + circunferencia.area());
-        System.out.println("el perimetro es: " + circunferencia.perimetro());
-// </editor-fold>
+
+
 // <editor-fold defaultstate="collapsed" desc=" Ejercicio 3">
-        Operacion3 oper = new Operacion3();
+        Operacion oper = new Operacion();
         oper.crearOperacion();
         System.out.println("El valor de la suma es: " + oper.suma());
         System.out.println("El valor de la resta es: " + oper.resta());
@@ -50,28 +40,7 @@ libro.mostrarInfo();
        rectangulo.dibuRectangulo();
 // </editor-fold>
 // <editor-fold defaultstate="collapsed" desc=" Ejercicio 5">
-//Realizar una clase llamada Cuenta (bancaria) que debe tener como mínimo los atributos:
-//numeroCuenta (entero), el DNI del cliente (entero largo) y el saldo actual (entero).
-//Las operaciones asociadas a dicha clase son:
-//a) Constructor por defecto y constructor con DNI, saldo, número de cuenta e interés.
-//b) Agregar los métodos getters y setters correspondientes
-//c) Metodo para crear un objeto Cuenta, pidiéndole los datos al usuario.
-//d) Método ingresar(double ingreso): el método recibe una cantidad de dinero a ingresar
-//y se la sumara a saldo actual.
-//e) Método retirar(double retiro): el método recibe una cantidad de dinero a retirar y se
-//la restará al saldo actual. Si la cuenta no tiene la cantidad de dinero a retirar, se
-//pondrá el saldo actual en 0.
-//f) Método extraccionRapida(): le permitirá sacar solo un 20% de su saldo. Validar que el
-//usuario no saque más del 20%.
-//g) Método consultarSaldo(): permitirá consultar el saldo disponible en la cuenta.
-//h) Método consultarDatos(): permitirá mostrar todos los datos de la cuenta
-//(el codigo esta en Entidad.Cuenta)
-//        Cuenta cuenta = new Cuenta();
-//        cuenta.crearCuenta();
-//        cuenta.ingresar(0);
-//        cuenta.retirar(0);
-//        cuenta.extraccionRapida();
-//        cuenta.consultarSaldo();
+
 // </editor-fold>
 // <editor-fold defaultstate="collapsed" desc=" Ejercicio 6">
 Cafetera cafetera = new Cafetera();
@@ -141,7 +110,7 @@ cafetera.vaciarCafetera();
  System.out.println("Ingrese el dia dd: ");
 int dia = consola.nextInt();
 System.out.println("Ingrese el mes MM: ");
-nt mes = consola.nextInt();
+int mes = consola.nextInt();
 System.out.println("Ingrese el año AAAA: ");
 int anio = consola.nextInt();
 LocalDate fecha = LocalDate.of(anio, mes, dia);
@@ -149,7 +118,9 @@ long diferenciaAnios = ChronoUnit.YEARS.between(fecha, fechaActual);
 System.out.println("La diferencia de años entre " + fecha + " y " + fechaActual + " es: " + diferenciaAnios);
 // </editor-fold>
 // <editor-fold defaultstate="collapsed" desc=" Ejercicio 12">
+
 Persona persona = new Persona();
+
 persona.crearPersona();
 persona.menorQue();
 persona.mostrarPersona();
