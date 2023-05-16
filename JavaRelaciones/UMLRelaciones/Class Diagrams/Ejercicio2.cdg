@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="Ejercicio2">
+  <ClassDiagramComponents>
+    <Class name="Jugador" package="" visibility="public" xPosition="756.0" yPosition="387.0">
+      <Fields>
+        <Field name="id" type="int" visibility="private"/>
+        <Field name="nombre" type="String" visibility="private"/>
+        <Field name="mojado" type="boolean" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="disparo" returnType="boolean" visibility="public">
+          <Argument type="Revolver" name="r"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Juego" package="" visibility="public" xPosition="429.0" yPosition="31.0">
+      <Fields>
+        <Field name="jugadores" type="ArrayList&lt;Jugador&gt;" visibility="private"/>
+        <Field name="revolver" type="RevolverAgua" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="llenarJuego" returnType="void" visibility="public"/>
+        <Method name="ronda" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="RevolverAgua" package="" visibility="public" xPosition="167.0" yPosition="310.0">
+      <Fields>
+        <Field name="posicionActual" type="int" visibility="private"/>
+        <Field name="posicionAgua" type="int" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="llenarRevolver" returnType="void" visibility="public"/>
+        <Method name="mojar" returnType="boolean" visibility="public"/>
+        <Method name="siguienteChorro" returnType="void" visibility="public"/>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <HasRelation name="usarRevolver" source="Juego" target="RevolverAgua" type="Composition" sourceCardinality="0..1" targetCardinality="1..1"/>
+    <HasRelation name="llenarJugadores" source="Juego" target="Jugador" type="Aggregation" sourceCardinality="0..1" targetCardinality="1..*" collectionType="ArrayList"/>
+  </ClassDiagramRelations>
+</ClassDiagram>
