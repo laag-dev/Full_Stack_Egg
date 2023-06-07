@@ -30,15 +30,12 @@ persona2.adoptarPerro(perro1);
 // </editor-fold>     
 // <editor-fold defaultstate="collapsed" desc=" Ejercicio 2">
  
-        Juego juego = new Juego();
-
-        juego.llenarJuego();
-        juego.ronda();
+//        Juego juego = new Juego();
+//
+//        juego.llenarJuego();
+//        juego.ronda();
 // </editor-fold>       
-// <editor-fold defaultstate="collapsed" desc=" Ejercicio 3">
-
-
- // </editor-fold>   
+   
     }
     
 }
