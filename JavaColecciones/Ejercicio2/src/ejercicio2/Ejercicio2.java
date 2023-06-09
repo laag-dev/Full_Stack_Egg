@@ -13,7 +13,7 @@ public class Ejercicio2 {
 //está en la lista, se eliminará el perro que ingresó el usuario y se mostrará la lista 
 // ordenada. Si el perro no se encuentra en la lista, se le informará al usuario y se mostrará 
 //la lista ordenada.
-        Scanner consola = new Scanner(System.in);
+             Scanner consola = new Scanner(System.in);
 
         ArrayList<String> razaPerro = new ArrayList();
         String respuestaFin;
@@ -54,14 +54,15 @@ public class Ejercicio2 {
                 buscar.remove();
                 System.out.println("La raza ingresada fue eliminada de la base de datos: " + raza);
                 for (String aux : razaPerro) {
-                    System.out.println(cont + " ----> " + aux);
-                    cont++;  
+                    System.out.println((cont - 1) + " ----> " + aux);
+                    cont++; 
+                    break;
                 } 
-                break;
+                
             } else {
                 System.out.println("La raza no se encuentra en la base de datos");
             }
-        }
-
+            
+        }  
     }
 }//fin
